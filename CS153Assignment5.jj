@@ -6,7 +6,9 @@ options
 }
 
 PARSER_BEGIN(CS153Assignment5)
-public class CS153Assignment5 {}
+public class CS153Assignment5 {
+  
+  }
 PARSER_END(CS153Assignment5)
 
 TOKEN_MGR_DECLS : {
@@ -103,11 +105,12 @@ TOKEN:
     "0"(["0"-"7"])* | //Ocatal
 	("0x"|"0X")(["0"-"9"]|["a"-"z", "A"-"Z"])+ > //Hexadecimal
 	{ debugStream.println("INTEGER token: " + matchedToken.image); }
-  	/*| 
+  	| 
     <NUMBER:
-    ["0"-"9"]+"."["0"-"9"]* + (("E"|"e") ("+"|"-")? ["0"-"9"]+)? |
-    ["0"-"9"]+ (".")? ["0"-"9"]* ("E"|"e") ("+"|"-")? ["0"-"9"]+ |
-    ["0"-"9"]* "." ["0"-"9"]+ (("E"|"e") ("+"|"-")? ["0"-"9"]+)? |
-    ["0"-"9"]* (".")? ["0"-"9"]+ ("E"|"e") ("+"|"-")? ["0"-"9"]+
-    >*/
+    (["0"-"9"])+"."(["0"-"9"])+ |
+    (["1"-"9"])(["0"-"9"])*["E","e"]["+","-"](["0"-"9"])+|
+    (["0"-"9"])+ "." (["0"-"9"]) ["e","E"] | ["+","-"](["0"-"9"])
+    >
+   	{ debugStream.println("NUMBER token: " + matchedToken.image); }
+      
 }
