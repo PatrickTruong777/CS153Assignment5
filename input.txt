@@ -14,7 +14,7 @@ What_is_that?
 'x' 'A' '\' 'b'
 // String tokens
 "Hello, world."
-"It's Friday!"
+"It's Friday! /\ Good Thing"
 ""
 // Special symbol tokens
 + - * / := . , ; : = <> < <= >= > ( ) [ ] { } } ^ ..
