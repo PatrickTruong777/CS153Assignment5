@@ -1,0 +1,227 @@
+IDENTIFIER token: Two
+IDENTIFIER token: here
+SPECIAL SYMBOL token: .
+IDENTIFIER token: Hello
+IDENTIFIER token: world
+IDENTIFIER token: Abstract
+RESERVED token: abstract
+IDENTIFIER token: ABSTRACT
+IDENTIFIER token: aBsTrAcT
+IDENTIFIER token: What_is_that
+SPECIAL SYMBOL token: ?
+CHARACTER token: 'x'
+CHARACTER token: 'A'
+CHARACTER token: '\'
+CHARACTER token: 'b'
+STRING token: "Hello, world."
+STRING token: "It's Friday!"
+STRING token: ""
+SPECIAL SYMBOL token: +
+SPECIAL SYMBOL token: -
+SPECIAL SYMBOL token: *
+SPECIAL SYMBOL token: /
+SPECIAL SYMBOL token: :
+SPECIAL SYMBOL token: =
+SPECIAL SYMBOL token: .
+SPECIAL SYMBOL token: ,
+SPECIAL SYMBOL token: ;
+SPECIAL SYMBOL token: :
+SPECIAL SYMBOL token: =
+SPECIAL SYMBOL token: <
+SPECIAL SYMBOL token: >
+SPECIAL SYMBOL token: <
+SPECIAL SYMBOL token: <=
+SPECIAL SYMBOL token: >=
+SPECIAL SYMBOL token: >
+SPECIAL SYMBOL token: (
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: [
+SPECIAL SYMBOL token: ]
+SPECIAL SYMBOL token: {
+SPECIAL SYMBOL token: }
+SPECIAL SYMBOL token: }
+SPECIAL SYMBOL token: ^
+SPECIAL SYMBOL token: .
+SPECIAL SYMBOL token: .
+SPECIAL SYMBOL token: <<=
+SPECIAL SYMBOL token: >>=
+SPECIAL SYMBOL token: :
+SPECIAL SYMBOL token: =
+SPECIAL SYMBOL token: <
+SPECIAL SYMBOL token: >=
+SPECIAL SYMBOL token: <=
+SPECIAL SYMBOL token: =
+SPECIAL SYMBOL token: >>=
+SPECIAL SYMBOL token: ==
+INTEGER token: 0
+INTEGER token: 1
+NUMBER token: 12.0
+INTEGER token: 00000000000000000012
+NUMBER token: .12
+NUMBER token: 1.
+NUMBER token: .2
+INTEGER token: 012
+INTEGER token: 0x12
+INTEGER token: 0xAb
+INTEGER token: 0x0E12
+NUMBER token: 12.
+NUMBER token: 0.12
+NUMBER token: .12
+NUMBER token: 1.2e+2
+NUMBER token: 12e+2
+NUMBER token: 12e2
+NUMBER token: 0e2
+NUMBER token: 12e-2
+NUMBER token: 12e-5
+NUMBER token: .12e+2
+NUMBER token: 12.e+2
+NUMBER token: 12e-1
+NUMBER token: 12e12
+NUMBER token: .31415926
+NUMBER token: 3.1415926
+NUMBER token: 0.00031415926E4
+NUMBER token: 0.00031415926e+00004
+NUMBER token: 31415.926e-4
+NUMBER token: 3141592600000000000000000000000e-30
+RESERVED token: public
+IDENTIFIER token: ICodeNode
+IDENTIFIER token: parse
+SPECIAL SYMBOL token: (
+IDENTIFIER token: Token
+IDENTIFIER token: token
+SPECIAL SYMBOL token: )
+RESERVED token: throws
+IDENTIFIER token: Exception
+SPECIAL SYMBOL token: {
+INTEGER token: 4
+IDENTIFIER token: token
+SPECIAL SYMBOL token: =
+IDENTIFIER token: nextToken
+SPECIAL SYMBOL token: (
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: ICodeNode
+IDENTIFIER token: loopNode
+SPECIAL SYMBOL token: =
+IDENTIFIER token: ICodeFactory
+SPECIAL SYMBOL token: .
+IDENTIFIER token: createICodeNode
+SPECIAL SYMBOL token: (
+IDENTIFIER token: LOOP
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: ICodeNode
+IDENTIFIER token: testNode
+SPECIAL SYMBOL token: =
+IDENTIFIER token: ICodeFactory
+SPECIAL SYMBOL token: .
+IDENTIFIER token: createICodeNode
+SPECIAL SYMBOL token: (
+IDENTIFIER token: TEST
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: StatementParser
+IDENTIFIER token: statementParser
+SPECIAL SYMBOL token: =
+RESERVED token: new
+IDENTIFIER token: StatementParser
+SPECIAL SYMBOL token: (
+RESERVED token: this
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: statementParser
+SPECIAL SYMBOL token: .
+IDENTIFIER token: parseList
+SPECIAL SYMBOL token: (
+IDENTIFIER token: token
+SPECIAL SYMBOL token: ,
+IDENTIFIER token: loopNode
+SPECIAL SYMBOL token: ,
+IDENTIFIER token: UNTIL
+SPECIAL SYMBOL token: ,
+IDENTIFIER token: MISSING_UNTIL
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: token
+SPECIAL SYMBOL token: =
+IDENTIFIER token: currentToken
+SPECIAL SYMBOL token: (
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: ExpressionParser
+IDENTIFIER token: expressionParser
+SPECIAL SYMBOL token: =
+RESERVED token: new
+IDENTIFIER token: ExpressionParser
+SPECIAL SYMBOL token: (
+RESERVED token: this
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: ICodeNode
+IDENTIFIER token: exprNode
+SPECIAL SYMBOL token: =
+IDENTIFIER token: expressionParser
+SPECIAL SYMBOL token: .
+IDENTIFIER token: parse
+SPECIAL SYMBOL token: (
+IDENTIFIER token: token
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: testNode
+SPECIAL SYMBOL token: .
+IDENTIFIER token: addChild
+SPECIAL SYMBOL token: (
+IDENTIFIER token: exprNode
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: loopNode
+SPECIAL SYMBOL token: .
+IDENTIFIER token: addChild
+SPECIAL SYMBOL token: (
+IDENTIFIER token: testNode
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+IDENTIFIER token: TypeSpec
+IDENTIFIER token: exprType
+SPECIAL SYMBOL token: =
+IDENTIFIER token: exprNode
+SPECIAL SYMBOL token: !=
+RESERVED token: null
+SPECIAL SYMBOL token: ?
+IDENTIFIER token: exprNode
+SPECIAL SYMBOL token: .
+IDENTIFIER token: getTypeSpec
+SPECIAL SYMBOL token: (
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: :
+IDENTIFIER token: Predefined
+SPECIAL SYMBOL token: .
+IDENTIFIER token: undefinedType
+SPECIAL SYMBOL token: ;
+RESERVED token: if
+SPECIAL SYMBOL token: (
+SPECIAL SYMBOL token: !
+IDENTIFIER token: TypeChecker
+SPECIAL SYMBOL token: .
+IDENTIFIER token: isBoolean
+SPECIAL SYMBOL token: (
+IDENTIFIER token: exprType
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: {
+IDENTIFIER token: errorHandler
+SPECIAL SYMBOL token: .
+IDENTIFIER token: flag
+SPECIAL SYMBOL token: (
+IDENTIFIER token: token
+SPECIAL SYMBOL token: ,
+IDENTIFIER token: INCOMPATIBLE_TYPES
+SPECIAL SYMBOL token: ,
+RESERVED token: this
+SPECIAL SYMBOL token: )
+SPECIAL SYMBOL token: ;
+SPECIAL SYMBOL token: }
+RESERVED token: return
+IDENTIFIER token: loopNode
+SPECIAL SYMBOL token: ;
+SPECIAL SYMBOL token: }
